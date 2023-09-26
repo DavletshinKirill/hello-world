@@ -1,0 +1,14 @@
+.mat-grid-tile {
+  background-color: #f0dc8d;
+}
+.image {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.fixed-button {
+  position: fixed;
+  bottom: 20px; /* Adjust this value to control the distance from the bottom */
+  right: 20px; /* Adjust this value to control the distance from the right */
+  z-index: 1000; /* Adjust the z-index as needed to ensure the button appears above other content */
+}

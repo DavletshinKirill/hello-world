@@ -1,0 +1,35 @@
+<div class="flex mt-20">
+  <div class="m-auto" style="width:80%">
+    <mat-grid-list cols="3" rowHeight="2:2.5" gutterSize="40">
+      <mat-grid-tile *ngFor="let element of dataSourse">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>{{ element.name }}</mat-card-title>
+            <mat-card-subtitle>{{ element.description }}</mat-card-subtitle>
+          </mat-card-header>
+          <mat-divider></mat-divider>
+          <a routerLink="product/{{element.id}}">
+            <img mat-card-image [src]="element.image"
+                 alt="Photo of a Shiba Inu" class='image mt-4'>
+          </a>
+          <mat-card-content>
+            <mat-divider class="mt-3"></mat-divider>
+            <p class="mt-4">Price: {{element.price}}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-fab class="ml-auto" (click)="addProduct(element)">
+              <mat-icon>add_shopping_cart</mat-icon>
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+    <div class="fixed-button">
+      <div *ngIf="this.amountProducts > 0">
+        <button mat-fab matBadge="{{this.amountProducts}}" matBadgeColor="accent" (click)="showOrder()">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

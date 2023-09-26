@@ -40,3 +40,12 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+angular.json
+package-lock.json
+package.json
+postcss.config.js
+proxy.conf.json
+tailwind.config.js
+
+
